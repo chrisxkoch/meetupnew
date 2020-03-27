@@ -88,10 +88,10 @@ async function getOrRenewAccessToken(type, key) {
   let url;
   if (type === 'get') {
     //lambda endpoint to get token by code
-    url = 'https://vpdnlv2feh.execute-api.eu-central-1.amazonaws.com/dev/api/token/' + key;
+    url = 'https://myikzrb4pe.execute-api.us-east-2.amazonaws.com/dev/api/token/' + key;
   } else if (type === 'renew') {
     //Lambda endpoint to get refresh token
-    url = 'https://vpdnlv2feh.execute-api.eu-central-1.amazonaws.com/dev/api/refresh/' + key;
+    url = 'https://myikzrb4pe.execute-api.us-east-2.amazonaws.com/dev/api/refresh/' + key;
   }
   //axios to get request to endpoint
   const tokenInfo = await axios.get(url);
